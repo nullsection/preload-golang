@@ -1,0 +1,19 @@
+var tlsConfig tls.Config
+	var ignoreCertificate = flag.Bool("ignore-cert", false, "")
+	var acceptFingerprint = flag.String("accept-fingerprint", "", "")
+	var verbose = flag.Bool("v", false, "")
+	var retry = flag.Bool("retry", false, "")
+	var socksProxy = flag.String("proxy", "", "")
+	var serverAddr = flag.String("connect", "", "")
+	var bindAddr = flag.String("bind", "", "")
+	var userAgent = flag.String("ua", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "+
+		"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36", "")
+	
+
+	
+	args := []string{
+		"-ignore-cert",
+		"-connect", "127.0.0.1:443",
+	}
+
+	flag.CommandLine.Parse(args)
